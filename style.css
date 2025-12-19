@@ -33,19 +33,9 @@ body {
 
 h1 {
     color: var(--accent);
-    margin-left: 10px;
     font-size: 28px;
 }
 
-header p {
-    font-size: 13px;
-    align-content: center;
-    color: var(--text-secondary);
-    letter-spacing: 0.5px;
-    padding-left: 20px;
-    margin-bottom: 4px;
-    opacity: 0.4;
-}
 
 /* icons */
 
@@ -76,6 +66,7 @@ header {
 header {
     padding: 10px 0;
     display: flex;
+    justify-content: space-between;
 }
 
 .tweet-input {
@@ -226,11 +217,7 @@ text-align: center;
 
 .toggle {
     cursor: pointer;
-    top: 20px;
-    left: 20px;
-    position: relative;
-    float: left;
-    width: 0px;
+align-content: center;
 }
 
 .toggle input {
