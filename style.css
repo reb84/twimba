@@ -1,3 +1,16 @@
+:root {
+    --bg-primary: #FFFFFF;
+    --text-primary: #262626;
+    --text-secondary: #455166;
+    --border: #dce1e9;
+    --icons: #6a7996;
+    --accent: #3067f8;
+    --like: #d95896;
+    --repost: #5abd6d;
+    --post-hover: #f7f8fa;
+}
+
+
 html,
 body {
     margin: 0;
@@ -8,38 +21,56 @@ body {
 /* typography and icons */
 
 h1 {
-    color: #0F8CDF;
-    margin-bottom: 10px;
-    font-size: 20px;
+    color: var(--accent);
+    margin-left: 10px;
+    font-size: 28px;
 }
+
+header p {
+    font-size: 13px;
+    align-content: center;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    padding-left: 20px;
+    margin-bottom: 4px;
+    opacity: 0.4;
+}
+
+/* icons */
 
 i {
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
-}
-
-.fa-solid {
-    color: #999;
+    color: var(--icons);
 }
 
 .liked {
-    color: red;
+    color: var(--like);
 }
 
-.retweeted {
-    color: limegreen;
+.reposted {
+    color: var(--repost);
 }
+
+
 
 /* layout */
 
 main,
 header {
-    width: 290px;
+    width: 500px;
     margin: 0 auto;
 }
 
 header {
-    padding-bottom: 25px;
+    padding: 10px 0;
+    display: flex;
+}
+
+.tweet-input {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--post-hover);
 }
 
 .tweet-input-area {
@@ -62,24 +93,28 @@ textarea {
 }
 
 button {
-    background-color: #1DA1F2;
+    background-color: var(--accent);
     border: none;
     color: white;
     padding: 10px 19px;
     border-radius: 20px;
     width: 100%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 /* tweet */
 
 .tweet {
-    border-top: 1px solid lightgray;
-    padding: 20px 0 0 0;
-    width: 100%;
-    margin: 15px 0;
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.tweet:hover {
+    background-color: var(--post-hover);
 }
 
 .tweet-inner {
@@ -101,21 +136,24 @@ button {
 }
 
 .tweet-reply {
-    border-top: 1px solid lightgray;
-    padding: 20px 0 0 0px;
-    margin: 10px 0 10px 40px;
-    width: 80%;
+    border-top: 1px solid var(--border);
+    padding: 20px;
+    margin: 10px 10px 0px 50px;
+    border-radius: 0 0 20px 20px;
+}
+
+.tweet-reply:hover {
+    background-color: var(--bg-primary);
 }
 
 .handle {
     font-size: 12px;
     font-weight: 500;
-    color: #555;
+    color: var(--text-secondary);
     margin-top: 0;
 }
 
 .tweet-text {
-    width: 207px;
     font-size: 14px;
     line-height: 20px;
 }
@@ -123,7 +161,7 @@ button {
 /* images */
 
 .profile-pic {
-    border: 1px solid lightgray;
+    border: 1px solid var(--border);
     border-radius: 50%;
     width: 48px;
 }
@@ -132,6 +170,15 @@ button {
 .hidden {
     display: none;
 }
+
+
+
+
+
+
+
+
+
 
 
 /* GitHub link */
@@ -152,5 +199,5 @@ button {
 }
 
 .github-button:hover {
-    color: skyblue;
+    color: var(--blue)
 }

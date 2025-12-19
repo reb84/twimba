@@ -3,7 +3,7 @@ export const tweetsData = [
     handle: `@WildeInWestminster`,
     profilePic: `assets/wilde.jpg`,
     likes: 1847,
-    retweets: 423,
+    reposts: 423,
     tweetText: `The birds are singing their usual morning symphony. How delightfully tedious. One does wonder if they ever tire of their own voice.`,
     replies: [
       {
@@ -23,14 +23,14 @@ export const tweetsData = [
       },
     ],
     isLiked: false,
-    isRetweeted: false,
+    isReposted: false,
     uuid: "4b161eee-c0f5-4545-9c4b-8562944223ee",
   },
   {
     handle: `@TheBardsThe1Thing`,
     profilePic: `assets/shakespeare.jpg`,
     likes: 2847,
-    retweets: 892,
+    reposts: 892,
     tweetText: `To tweet or not to tweet, that is the question. Whether 'tis nobler to share one's thoughts or keep them to oneself...`,
     replies: [
       {
@@ -40,25 +40,25 @@ export const tweetsData = [
       },
     ],
     isLiked: false,
-    isRetweeted: false,
+    isReposted: false,
     uuid: "3c23454ee-c0f5-9g9g-9c4b-77835tgs2",
   },
   {
     handle: `@RadioactiveMarie`,
     profilePic: `assets/curie.jpg`,
     likes: 5403,
-    retweets: 1284,
+    reposts: 1284,
     tweetText: `Just discovered a new element! Glowing with excitement. Literally. Should probably see a doctor.`,
     replies: [],
     isLiked: false,
-    isRetweeted: false,
+    isReposted: false,
     uuid: "8hy671sff-c0f5-4545-9c4b-1237gyys45",
   },
   {
     handle: `@NotThatShort`,
     profilePic: `assets/napoleon.jpg`,
     likes: 394,
-    retweets: 67,
+    reposts: 67,
     tweetText: `People keep making jokes about my height. I conquered most of Europe but sure, let's focus on that. 🙄`,
     replies: [
       {
@@ -73,18 +73,18 @@ export const tweetsData = [
       },
     ],
     isLiked: false,
-    isRetweeted: false,
+    isReposted: false,
     uuid: "7js83jss-c0f5-4545-9c4b-8395kd83js",
   },
   {
     handle: `@Vincent`,
     profilePic: `assets/vangogh.jpg`,
     likes: 891,
-    retweets: 234,
+    reposts: 234,
     tweetText: `Painted another starry night. Feeling underappreciated. Again. Maybe I should try abstract art?`,
     replies: [],
     isLiked: false,
-    isRetweeted: false,
+    isReposted: false,
     uuid: "9dj49dks-c0f5-4545-9c4b-9348fjsd73",
   },
 ];

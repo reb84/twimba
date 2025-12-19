@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like);
-  } else if (e.target.dataset.retweet) {
-    handleRetweetClick(e.target.dataset.retweet);
+  } else if (e.target.dataset.repost) {
+    handleRepostClick(e.target.dataset.repost);
   } else if (e.target.dataset.reply) {
     handleReplyClick(e.target.dataset.reply);
   } else if (e.target.id === "tweet-btn") {
@@ -27,17 +27,17 @@ function handleLikeClick(tweetId) {
   render();
 }
 
-function handleRetweetClick(tweetId) {
+function handleRepostClick(tweetId) {
   const targetTweetObj = tweetsData.filter(function (tweet) {
     return tweet.uuid === tweetId;
   })[0];
 
-  if (targetTweetObj.isRetweeted) {
-    targetTweetObj.retweets--;
+  if (targetTweetObj.isReposted) {
+    targetTweetObj.reposts--;
   } else {
-    targetTweetObj.retweets++;
+    targetTweetObj.reposts++;
   }
-  targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted;
+  targetTweetObj.isReposted = !targetTweetObj.isReposted;
   render();
 }
 
@@ -53,11 +53,11 @@ function handleTweetBtnClick() {
       handle: `@Scrimba`,
       profilePic: `assets/scrimbalogo.png`,
       likes: 0,
-      retweets: 0,
+      reposts: 0,
       tweetText: tweetInput.value,
       replies: [],
       isLiked: false,
-      isRetweeted: false,
+      isReposted: false,
       uuid: uuidv4(),
     });
     render();
@@ -70,7 +70,7 @@ function getFeedHtml() {
 
   tweetsData.forEach(function (tweet) {
     const likeIconClass = tweet.isLiked ? "liked" : "";
-    const retweetIconClass = tweet.isRetweeted ? "retweeted" : "";
+    const repostIconClass = tweet.isReposted ? "reposted" : "";
 
     let repliesHtml = "";
 
@@ -99,23 +99,26 @@ function getFeedHtml() {
             <p class="tweet-text">${tweet.tweetText}</p>
             <div class="tweet-details">
                 <span class="tweet-detail">
-                    <i class="fa-regular fa-comment-dots"
+                    <i class="fa-regular fa-message"
                     data-reply="${tweet.uuid}"
                     ></i>
                     ${tweet.replies.length}
                 </span>
+ 
                 <span class="tweet-detail">
+                    <i class="fa-solid fa-repeat ${repostIconClass}"
+                    data-repost="${tweet.uuid}"
+                    ></i>
+                    ${tweet.reposts}
+                </span>
+
+                               <span class="tweet-detail">
                     <i class="fa-solid fa-heart ${likeIconClass}"
                     data-like="${tweet.uuid}"
                     ></i>
                     ${tweet.likes}
                 </span>
-                <span class="tweet-detail">
-                    <i class="fa-solid fa-retweet ${retweetIconClass}"
-                    data-retweet="${tweet.uuid}"
-                    ></i>
-                    ${tweet.retweets}
-                </span>
+                
             </div>   
         </div>            
     </div>
