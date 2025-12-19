@@ -8,4 +8,4 @@
 
 ✨ [TWEET](https://twimba-orcin.vercel.app/) -->
 
-A simple Twitter clone. This repo expands on original project worked on with Scrimba.
+A simple Twitter clone. This repo expands on original project worked on [with Scrimba](https://github.com/reb84/my-scrimba-projects/tree/main/11-twimba).

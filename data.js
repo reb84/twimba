@@ -1,58 +1,90 @@
-export const tweetsData = [   
-    {
-        handle: `@TrollBot66756542 💎`,
-        profilePic: `assets/troll.jpg`,
-        likes: 27,
-        retweets: 10,
-        tweetText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
-            Guaranteed return on investment. HMU DMs open!!`,
-        replies: [],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: '4b161eee-c0f5-4545-9c4b-8562944223ee',
-    },    
-    {
-        handle: `@Elon ✅`,
-        profilePic: `assets/musk.png`,
-        likes: 6500,
-        retweets: 234,
-        tweetText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
-        replies: [
-                  {
-                handle: `@TomCruise ✅`,
-                profilePic: `assets/tcruise.png`,
-                tweetText: `Yes! Sign me up! 😎🛩`,
-            },
-                  {
-                handle: `@ChuckNorris ✅`,
-                profilePic: `assets/chucknorris.jpeg`,
-                tweetText: `I went last year😴`,
-            },
-        ],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
-    },
-        {
-        handle: `@NoobCoder12`,
-        profilePic: `assets/flower.png`,
-        likes: 10,
-        retweets: 3,
-        tweetText: `Are you a coder if you only know HTML?`,
-        replies: [
-            {
-                handle: `@StackOverflower ☣️`,
-                profilePic: `assets/overflow.png`,
-                tweetText: `No. Obviosuly not. Go get a job in McDonald's.`,
-            },
-            {
-                handle: `@YummyCoder64`,
-                profilePic: `assets/love.png`,
-                tweetText: `You are wonderful just as you are! ❤️`,
-            },
-        ],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: '8hy671sff-c0f5-4545-9c4b-1237gyys45',
-    },     
-]
+export const tweetsData = [
+  {
+    handle: `@WildeInWestminster`,
+    profilePic: `assets/wilde.jpg`,
+    likes: 1847,
+    retweets: 423,
+    tweetText: `The birds are singing their usual morning symphony. How delightfully tedious. One does wonder if they ever tire of their own voice.`,
+    replies: [
+      {
+        handle: `@DeafComposer1770`,
+        profilePic: `assets/beethoven.jpg`,
+        tweetText: `WHAT ARE THEY SINGING?? I'M DEAF. Can someone PLEASE describe the birdsong to me in EXCRUCIATING DETAIL???`,
+      },
+      {
+        handle: `@WildeInWestminster`,
+        profilePic: `assets/wilde.jpg`,
+        tweetText: `My dear Ludwig, imagine the sound of someone relentlessly cheerful at 6am. That is birdsong.`,
+      },
+      {
+        handle: `@ChildProdigyVibes`,
+        profilePic: `assets/mozart.jpg`,
+        tweetText: `@DeafComposer1770 It goes like: tweet tweet chirp chirp TWEET. You're welcome 🎵`,
+      },
+    ],
+    isLiked: false,
+    isRetweeted: false,
+    uuid: "4b161eee-c0f5-4545-9c4b-8562944223ee",
+  },
+  {
+    handle: `@TheBardsThe1Thing`,
+    profilePic: `assets/shakespeare.jpg`,
+    likes: 2847,
+    retweets: 892,
+    tweetText: `To tweet or not to tweet, that is the question. Whether 'tis nobler to share one's thoughts or keep them to oneself...`,
+    replies: [
+      {
+        handle: `@SixWordStories`,
+        profilePic: `assets/hemingway.jpg`,
+        tweetText: `Just tweet, Bill. Stop overthinking it.`,
+      },
+    ],
+    isLiked: false,
+    isRetweeted: false,
+    uuid: "3c23454ee-c0f5-9g9g-9c4b-77835tgs2",
+  },
+  {
+    handle: `@RadioactiveMarie`,
+    profilePic: `assets/curie.jpg`,
+    likes: 5403,
+    retweets: 1284,
+    tweetText: `Just discovered a new element! Glowing with excitement. Literally. Should probably see a doctor.`,
+    replies: [],
+    isLiked: false,
+    isRetweeted: false,
+    uuid: "8hy671sff-c0f5-4545-9c4b-1237gyys45",
+  },
+  {
+    handle: `@NotThatShort`,
+    profilePic: `assets/napoleon.jpg`,
+    likes: 394,
+    retweets: 67,
+    tweetText: `People keep making jokes about my height. I conquered most of Europe but sure, let's focus on that. 🙄`,
+    replies: [
+      {
+        handle: `@HistoryNerd1815`,
+        profilePic: `assets/tall.jpg`,
+        tweetText: `Mate, you were literally average height for the time period`,
+      },
+      {
+        handle: `@NotThatShort`,
+        profilePic: `assets/napoleon.jpg`,
+        tweetText: `THANK YOU. British propaganda is still ruining my reputation 200 years later`,
+      },
+    ],
+    isLiked: false,
+    isRetweeted: false,
+    uuid: "7js83jss-c0f5-4545-9c4b-8395kd83js",
+  },
+  {
+    handle: `@Vincent`,
+    profilePic: `assets/vangogh.jpg`,
+    likes: 891,
+    retweets: 234,
+    tweetText: `Painted another starry night. Feeling underappreciated. Again. Maybe I should try abstract art?`,
+    replies: [],
+    isLiked: false,
+    isRetweeted: false,
+    uuid: "9dj49dks-c0f5-4545-9c4b-9348fjsd73",
+  },
+];
