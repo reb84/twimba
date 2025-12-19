@@ -10,12 +10,23 @@
     --post-hover: #f7f8fa;
 }
 
+.dark-mode {
+    --bg-primary: #1d222c;
+    --text-primary: #ffffff;
+    --text-secondary: #acb6c6;
+    --border: #323c4e;
+    --icons: #72819c;
+    --post-hover: #222935;
+}
+
 
 html,
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 /* typography and icons */
@@ -68,7 +79,7 @@ header {
 }
 
 .tweet-input {
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 20px;
     background-color: var(--post-hover);
 }
@@ -90,6 +101,7 @@ textarea {
     font-size: 18px;
     line-height: 30px;
     font-family: inherit;
+        background-color: var(--bg-primary);
 }
 
 button {
@@ -200,4 +212,50 @@ button {
 
 .github-button:hover {
     color: var(--blue)
+}
+
+
+/* Theme Toggle */
+
+.toggle {
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+    position: relative;
+    float: left;
+    width: 0px;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle label {
+    display: block;
+    width: 30px;
+    height: 14px;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle label::after {
+    content: "";
+    display: inherit;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: var(--border);
+    transition: 0.3s;
+}
+
+.toggle input:checked~label {
+    border-color: var(--accent);
+}
+
+.toggle input:checked~label::after {
+    translate: 16px 0;
+    background: var(--accent);
 }
