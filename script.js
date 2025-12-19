@@ -1,8 +1,6 @@
 import { tweetsData } from "./data.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
-
-
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like);
@@ -49,6 +47,7 @@ function handleReplyClick(replyId) {
 
 function handleTweetBtnClick() {
   const tweetInput = document.getElementById("tweet-input");
+  const emptyMessage = document.getElementById("empty-message");
 
   if (tweetInput.value) {
     tweetsData.unshift({
@@ -64,6 +63,9 @@ function handleTweetBtnClick() {
     });
     render();
     tweetInput.value = "";
+    emptyMessage.textContent = ""; // Clear the error message on success
+  } else {
+    emptyMessage.textContent = "Message is empty. Write something first and try again.";
   }
 }
 
@@ -138,9 +140,6 @@ function render() {
 }
 
 render();
-
-
-
 
 // Dark Mode
 
