@@ -14,3 +14,4 @@ A simple Twitter clone. This repo expands on original project worked on [with Sc
 - Dark mode toggle
 - Empty post message
 - Theme toggle changes added to local storage
+- Likes and reposts added to local storage
