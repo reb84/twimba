@@ -65,7 +65,8 @@ function handleTweetBtnClick() {
     tweetInput.value = "";
     emptyMessage.textContent = ""; // Clear the error message on success
   } else {
-    emptyMessage.textContent = "Message is empty. Write something first and try again.";
+    emptyMessage.textContent =
+      "Message is empty. Write something first and try again.";
   }
 }
 
@@ -139,10 +140,22 @@ function render() {
   document.getElementById("feed").innerHTML = getFeedHtml();
 }
 
-render();
-
 // Dark Mode
 
 document.getElementById("theme-toggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-mode");
+}
+
+render();
