@@ -1,6 +1,38 @@
 import { tweetsData } from "./data.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
+function loadTweetsFromLocalStorage() {
+  const savedStates = localStorage.getItem("tweetStates");
+
+  if (savedStates) {
+    const tweetStates = JSON.parse(savedStates);
+
+    tweetsData.forEach(function (tweet) {
+      if (tweetStates[tweet.uuid]) {
+        tweet.likes = tweetStates[tweet.uuid].likes;
+        tweet.isLiked = tweetStates[tweet.uuid].isLiked;
+        tweet.reposts = tweetStates[tweet.uuid].reposts;
+        tweet.isReposted = tweetStates[tweet.uuid].isReposted;
+      }
+    });
+  }
+}
+
+function saveTweetsToLocalStorage() {
+  const tweetStates = {};
+
+  tweetsData.forEach(function (tweet) {
+    tweetStates[tweet.uuid] = {
+      likes: tweet.likes,
+      isLiked: tweet.isLiked,
+      reposts: tweet.reposts,
+      isReposted: tweet.isReposted,
+    };
+  });
+
+  localStorage.setItem("tweetStates", JSON.stringify(tweetStates));
+}
+
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like);
@@ -25,6 +57,7 @@ function handleLikeClick(tweetId) {
   }
   targetTweetObj.isLiked = !targetTweetObj.isLiked;
   render();
+  saveTweetsToLocalStorage();
 }
 
 function handleRepostClick(tweetId) {
@@ -39,6 +72,7 @@ function handleRepostClick(tweetId) {
   }
   targetTweetObj.isReposted = !targetTweetObj.isReposted;
   render();
+  saveTweetsToLocalStorage();
 }
 
 function handleReplyClick(replyId) {
@@ -158,4 +192,5 @@ if (savedTheme === "dark") {
   document.body.classList.add("dark-mode");
 }
 
+loadTweetsFromLocalStorage();
 render();
